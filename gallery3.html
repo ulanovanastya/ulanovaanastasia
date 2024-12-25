@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Что? Где? Когда?</title>
+    <link rel="stylesheet" href="./assets/style/style3.css">
+    
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo">
+  <a href="./index.html" target="_blank">
+    <img src="./assets/img/с.png" alt="Логотип" id="logo">
+  </a>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="nav">
+  <ul class="navi">
+
+    <li><a href="./gallery2.html" target="_blank">Назад</a></li>
+    <li><a href="./gallery4.html">Вперед</a></li>
+  
+  </ul>
+</div>
+</div>
+<div class="container">
+    <div class="zagolovok">
+        <h1>Что? Где? Когда? 2023</h1>
+    </div>
+    <div class="galleryy">
+        <div class="item">
+            <img src="./assets/img/чгк.jpg" alt="Image 1" onclick="openModal(this.src)">
+        </div>
+        <div class="item">
+            <img src="./assets/img/чгк2.jpg" alt="Image 2" onclick="openModal(this.src)">
+        </div>
+        <div class="item">
+            <img src="./assets/img/чгк3.jpg" alt="Image 3" onclick="openModal(this.src)">
+        </div>
+        <div class="item">
+            <img src="./assets/img/чгк4.jpg" alt="Image 4" onclick="openModal(this.src)">
+        </div>
+        <div class="item">
+            <img src="./assets/img/чгк5.jpg" alt="Image 5" onclick="openModal(this.src)">
+        </div>
+        <div class="item">
+            <img src="./assets/img/чгк6.jpg" alt="Image 6" onclick="openModal(this.src)">
+        </div>
+        <div class="item">
+            <img src="./assets/img/чгк7.jpg" alt="Image 7" onclick="openModal(this.src)">
+        </div>
+        <div class="item">
+            <img src="./assets/img/чгк8.jpg" alt="Image 8" onclick="openModal(this.src)">
+        </div>
+        <div class="item">
+            <img src="./assets/img/чгк9.jpg" alt="Image 9" onclick="openModal(this.src)">
+        </div>
+
+
+    </div>
+</div>
+
+<!-- Модальное окно -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<script>
+    function openModal(src) {
+        document.getElementById("modalImage").src = src;
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    // Закрытие модального окна при клике вне изображения
+    window.onclick = function(event) {
+        let modal = document.getElementById("myModal");
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+</script>
+
+<footer>
+    <div class="footer">
+
+
+        <div class="row">
+            <ul>
+                <li><a href="#">ГЛАВНАЯ</a></li>
+                <li><a href="#">О НАС</a></li>
+                <li><a href="#">ЗАДАТЬ ВОПРОС</a></li>
+                <li><a href="#">ПРИВАТНАЯ ПОЛИТИКА</a></li>
+                <li><a href="#">СЕРТИФИКАТЫ И ЛИЦЕНЗИИ</a></li>
+
+            </ul>
+        </div>
+
+        <div class="row">
+            Все права защищены © 2002-2024, «НИИИС»
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+
+</html>
